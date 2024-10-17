@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 // constants.dart
 class AppColors {
 
-  static const Color background = Color.fromRGBO(40, 40, 43, 1);
+  static const Color background = Color.fromRGBO(44, 46, 52, 1);
+  static const Color white = Color.fromRGBO(229, 233, 232, 1);
   
   // Lime gradient
   static const List<Color> gradientLime = [
@@ -46,4 +47,5 @@ class AppColors {
     Color(0xFFD94AB5),
     Color(0xFFDE4848),
   ];
+
 }

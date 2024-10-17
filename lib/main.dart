@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_solattime/screen/home.dart';
+import 'package:flutter_solattime/screen/settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,11 @@ class MyApp extends StatelessWidget {
           bodySmall: TextStyle(color: Colors.white),
         ),
       ),
-      home: const Home(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Home(),
+        '/settings': (context) => const Settings()
+      },
     );
   }
 }

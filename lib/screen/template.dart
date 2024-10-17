@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_solattime/shared/constants.dart';
 
-class Settings extends StatelessWidget {
-  const Settings({super.key});
+class Template extends StatelessWidget {
+  const Template({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Settings Page'),
+        title: const Text('Template Title'),
         backgroundColor: AppColors.background,
         foregroundColor: AppColors.white,
       ),
@@ -17,7 +17,7 @@ class Settings extends StatelessWidget {
         child: const Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text("Hey"),
+            const Text("Template Body"),
           ],
         ),
       ),
