@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_solattime/shared/borderContainer.dart';
 import 'package:flutter_solattime/shared/boxContainer.dart';
 import 'package:flutter_solattime/shared/constants.dart';
+import 'package:flutter_solattime/shared/iText.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -29,45 +30,98 @@ class Home extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                height: 200,
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: AppColors.gradientBackground,
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                  ),
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const Text("Title", textAlign: TextAlign.center),
-                    BoxContainer(
-                        text: "Test 1", gradientColors: AppColors.gradientLime),
+                    const BorderContainer(
+                        text: "Test 1", gradientColors: AppColors.gradientBlue),
                     Container(
-                      child: const Row(
+                      padding: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[900],
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: const Column(
                         children: [
-                          Column(
+                          Row(
                             children: [
-                              Text("Subuh"),
-                              Text("Timer Subuh"),
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 10),
+                                child: Icon(
+                                  Icons.home,
+                                  color: AppColors.white,
+                                ),
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  iText(text: "Current Location Set", size: 16),
+                                  iText(
+                                      text: "Hijrah Calendar",
+                                      color: Colors.grey)
+                                ],
+                              ),
                             ],
                           ),
-                          Column(
+                          const Divider(color: AppColors.white),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Text("Zuhur"),
-                              Text("Timer Zuhur"),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text("Asar"),
-                              Text("Timer Asar"),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text("Maghrib"),
-                              Text("Timer Maghrib"),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text("Isyak"),
-                              Text("Timer Isyak"),
+                              Column(
+                                children: [
+                                  iText(text: "Subuh"),
+                                  iText(
+                                      text: "5:50 AM",
+                                      size: 10,
+                                      color: Colors.grey),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  iText(text: "Zuhur"),
+                                  iText(
+                                      text: "1.21 AM",
+                                      size: 10,
+                                      color: Colors.grey),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  iText(text: "Asar"),
+                                  iText(
+                                      text: "4.13 AM",
+                                      size: 10,
+                                      color: Colors.grey),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  iText(text: "Maghrib"),
+                                  iText(
+                                      text: "7.21 AM",
+                                      size: 10,
+                                      color: Colors.grey),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  iText(text: "Isyak"),
+                                  iText(
+                                      text: "8:19 AM",
+                                      size: 10,
+                                      color: Colors.grey),
+                                ],
+                              ),
                             ],
                           ),
                         ],
@@ -76,32 +130,33 @@ class Home extends StatelessWidget {
                   ],
                 ),
               ),
-              BoxContainer(
+              const BoxContainer(
                   text: "Test 1", gradientColors: AppColors.gradientLime),
-              BoxContainer(
+              const BoxContainer(
                   text: "Test 2", gradientColors: AppColors.gradientGreen),
-              BoxContainer(
+              const BoxContainer(
                   text: "Test 3", gradientColors: AppColors.gradientBlue),
-              BoxContainer(
+              const BoxContainer(
                   text: "Test 4", gradientColors: AppColors.gradientPurple),
-              BoxContainer(
+              const BoxContainer(
                   text: "Test 5", gradientColors: AppColors.gradientMagenta),
-              BoxContainer(
+              const BoxContainer(
                   text: "Test 6", gradientColors: AppColors.gradientPink),
-              BoxContainer(
+              const BoxContainer(
                   text: "Test 7", gradientColors: AppColors.gradientRed),
-              BorderContainer(
+              const BorderContainer(
                   text: "Test 8", gradientColors: AppColors.gradientLime),
               Column(
                 children: [
-                  Text("1. Navigation App Bar"),
-                  Text("2. Navigation between different screens"),
-                  Text("3. Heroku API"),
-                  Text("4. Login Page"),
-                  Text("5. Authentication"),
-                  Text("6. Authorize Token"),
+                  const Text("1. Navigation App Bar"),
+                  const Text("2. Navigation between different screens"),
+                  const Text("3. Heroku API"),
+                  const Text("4. Login Page"),
+                  const Text("5. Authentication"),
+                  const Text("6. Authorize Token"),
                   Container(
-                    height: 10, // It doesnt want to scroll until the last content
+                    height:
+                        10, // It doesnt want to scroll until the last content
                   )
                 ],
               )

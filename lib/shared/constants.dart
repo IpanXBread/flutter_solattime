@@ -48,4 +48,9 @@ class AppColors {
     Color(0xFFDE4848),
   ];
 
+    static const List<Color> gradientBackground= [
+    Color.fromARGB(255, 56, 72, 67),
+    Color.fromARGB(255, 51, 65, 72),
+  ];
+
 }
