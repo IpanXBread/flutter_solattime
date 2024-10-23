@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 class AppColors {
 
   static const Color background = Color.fromRGBO(44, 46, 52, 1);
+  static const Color background2 = Color.fromRGBO(80, 87, 94, 1);
   static const Color white = Color.fromRGBO(229, 233, 232, 1);
+  static const Color gray = Color.fromRGBO(62, 64, 63, 1);
+  static const Color black = Color.fromRGBO(36, 38, 37, 1);
   
   // Lime gradient
   static const List<Color> gradientLime = [

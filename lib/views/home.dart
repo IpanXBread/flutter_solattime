@@ -13,6 +13,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.background,
         foregroundColor: AppColors.white,
+        scrolledUnderElevation: 0,
         title: const Text("Home"),
         actions: [
           IconButton(
@@ -28,78 +29,45 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Stack(
-              clipBehavior: Clip.none,
               children: [
                 // White Container
-                Positioned(
-                  bottom: -1000,
-                  left: 0,
-                  right: 0,
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(vertical: 200),
-                    color: AppColors.white,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        const BoxContainer(
-                            text: "Test 1",
-                            gradientColors: AppColors.gradientLime),
-                        const BoxContainer(
-                            text: "Test 2",
-                            gradientColors: AppColors.gradientGreen),
-                        const BoxContainer(
-                            text: "Test 3",
-                            gradientColors: AppColors.gradientBlue),
-                        const BoxContainer(
-                            text: "Test 4",
-                            gradientColors: AppColors.gradientPurple),
-                        const BoxContainer(
-                            text: "Test 5",
-                            gradientColors: AppColors.gradientMagenta),
-                        const BoxContainer(
-                            text: "Test 6",
-                            gradientColors: AppColors.gradientPink),
-                        const BoxContainer(
-                            text: "Test 7",
-                            gradientColors: AppColors.gradientRed),
-                        const BorderContainer(
-                          gradientColors: AppColors.gradientLime,
-                          child: Text("Test 8"),
-                        ),
-                        Column(
-                          children: [
-                            const Text(
-                              "1. Navigation App Bar",
-                              style: TextStyle(color: Colors.black),
-                            ),
-                            const Text(
-                              "2. Navigation between different screens",
-                              style: TextStyle(color: Colors.black),
-                            ),
-                            const Text(
-                              "3. Heroku API",
-                              style: TextStyle(color: Colors.black),
-                            ),
-                            const Text(
-                              "4. Login Page",
-                              style: TextStyle(color: Colors.black),
-                            ),
-                            const Text(
-                              "5. Authentication",
-                              style: TextStyle(color: Colors.black),
-                            ),
-                            const Text(
-                              "6. Authorize Token",
-                              style: TextStyle(color: Colors.black),
-                            ),
-                            Container(
-                              height:
-                                  10, // It doesnt want to scroll until the last content
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+                Container(
+                  // height: MediaQuery.of(context).size.height,
+                  height: 3000,
+                  color: AppColors.background2,
+                  child: const Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(top: 350.0),
+                        child: Column(),
+                      ),
+                      const BoxContainer(
+                          text: "Test 1",
+                          gradientColors: AppColors.gradientLime),
+                      const BoxContainer(
+                          text: "Test 2",
+                          gradientColors: AppColors.gradientGreen),
+                      const BoxContainer(
+                          text: "Test 3",
+                          gradientColors: AppColors.gradientBlue),
+                      const BoxContainer(
+                          text: "Test 4",
+                          gradientColors: AppColors.gradientPurple),
+                      const BoxContainer(
+                          text: "Test 5",
+                          gradientColors: AppColors.gradientMagenta),
+                      const BoxContainer(
+                          text: "Test 6",
+                          gradientColors: AppColors.gradientPink),
+                      const BoxContainer(
+                          text: "Test 7",
+                          gradientColors: AppColors.gradientRed),
+                      const BorderContainer(
+                        gradientColors: AppColors.gradientLime,
+                        child: Text("Test 8"),
+                      ),
+                    ],
                   ),
                 ),
                 // Dark Container
@@ -124,15 +92,14 @@ class Home extends StatelessWidget {
                     ],
                   ),
                 ),
-                // Location Container
+                // Location Contation
                 Positioned(
-                  bottom: -100,
+                  bottom: 2650,
                   left: 0,
                   right: 0,
                   child: Container(
-                    height: 150,
-                    padding: const EdgeInsets.all(10),
-                    margin: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
+                    margin: const EdgeInsets.all(30),
                     decoration: BoxDecoration(
                       color: Colors.grey[900],
                       borderRadius: BorderRadius.circular(15),
@@ -221,3 +188,4 @@ class Home extends StatelessWidget {
     );
   }
 }
+
