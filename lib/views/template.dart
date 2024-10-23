@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_solattime/shared/constants.dart';
+import 'package:flutter_solattime/core/constants/constants.dart';
 
 class Template extends StatelessWidget {
   const Template({super.key});

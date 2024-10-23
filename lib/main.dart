@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_solattime/screen/home.dart';
-import 'package:flutter_solattime/screen/settings.dart';
+import 'package:flutter_solattime/views/home.dart';
+import 'package:flutter_solattime/views/settings.dart';
 
 void main() {
   runApp(const MyApp());

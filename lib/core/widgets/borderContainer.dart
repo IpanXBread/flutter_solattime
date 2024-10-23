@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_solattime/shared/constants.dart';
+import 'package:flutter_solattime/core/constants/constants.dart';
 
 class BorderContainer extends StatelessWidget {
-  final String text;
+  final Widget child;
   final List<Color> gradientColors;
 
   const BorderContainer(
-      {super.key, required this.text, required this.gradientColors});
+      {super.key, required this.child, required this.gradientColors});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,8 @@ class BorderContainer extends StatelessWidget {
         ),
         child: Container(
           padding: const EdgeInsets.all(12),
-          child: Text(text)),
+          child: child,
+        ),
       ),
     );
   }
